@@ -46,6 +46,9 @@ path+=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
+  $HOME/Library/flutter/bin
 )
 
 export path
+
+
