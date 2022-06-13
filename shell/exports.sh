@@ -37,6 +37,7 @@ path+=(
   "$GEM_HOME/bin"
   "$GOPATH/bin"
   "$HOME/.cargo/bin"
+  "$HOME/Library/flutter/bin"
   "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
@@ -46,9 +47,6 @@ path+=(
   "/usr/bin"
   "/usr/sbin"
   "/sbin"
-  $HOME/Library/flutter/bin
 )
 
 export path
-
-
