@@ -11,7 +11,7 @@ export CODELY_THEME_STATUS_ICON_KO="Λ"
 # ------------------------------------------------------------------------------
 # Languages
 # ------------------------------------------------------------------------------
-export JAVA_HOME='/Library/Java/JavaVirtualMachines/amazon-corretto-15.jdk/Contents/Home'
+export JAVA_HOME='$HOME/.sdkman/candidates/java/current'
 export GEM_HOME="$HOME/.gem"
 export GOPATH="$HOME/.go"
 
