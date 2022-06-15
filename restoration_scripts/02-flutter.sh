@@ -1,4 +1,6 @@
-git -C $HOME/Library/ clone https://github.com/flutter/flutter.git -b stable
+git clone https://github.com/flutter/flutter.git $HOME/Library/flutter
+
+flutter channel stable
 
 flutter precache
 
