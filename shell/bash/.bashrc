@@ -8,7 +8,7 @@ EXPORTED_PATH=$(
   IFS=":"
   echo "${path[*]}"
 )
-export PATH="$PATH:$EXPORTED_PATH"
+export PATH="$EXPORTED_PATH:$PATH"
 
 themes_paths=(
   "$DOTFILES_PATH/shell/bash/themes"
