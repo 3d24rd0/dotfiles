@@ -24,7 +24,19 @@ else
   fzf_colors="pointer:#db0f35,bg+:#d6d6d6,fg:#808080,fg+:#363636,hl:#8ec07c,info:#928374,header:#fffee3"
 fi
 
-export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
+# export FZF_DEFAULT_OPTS="--color=$fzf_colors --reverse"
+# if type rg &> /dev/null; then
+  export FZF_DEFAULT_COMMAND='rg --files --hidden'
+  export FZF_DEFAULT_OPTS="-m --height 50% --layout=reverse --border --inline-info 
+  --preview-window=:right:65%:hidden
+  --preview '([[ -f {} ]] && (bat --style=numbers --color=always {} || cat {})) || ([[ -d {} ]] && (tree -C {} | less)) || echo {} 2> /dev/null | head -200'
+  --bind '?:toggle-preview' 
+"
+# fi
+
+
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
 
 # ------------------------------------------------------------------------------
 # Path - The higher it is, the more priority it has
