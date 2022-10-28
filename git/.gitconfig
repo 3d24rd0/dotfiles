@@ -17,7 +17,7 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
-	editor = vim
+	editor = code --wait
 	autocrlf = input
 	trustctime = false
 	precomposeunicode = false
@@ -91,8 +91,8 @@
 # 	gpgsign = true
 # [gpg]
 # 	program = /usr/local/bin/gpg
-[pull]
-	rebase = true
+# [pull]
+# 	rebase = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
