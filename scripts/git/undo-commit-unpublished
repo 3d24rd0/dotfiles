@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+source "$DOTLY_PATH/scripts/core/_main.sh"
+
+##? Deshacer el último commit (no publicado)
+##?
+##? Usage:
+##?   undo-commit-unpublished (default soft)
+##?   undo-commit-unpublished soft|hard
+docs::parse "$@"
+
+
+
+#NO quieres mantener los cambios
+git reset --hard HEAD~1
+
+
+case $1 in
+"soft")
+  # quieres mantener los cambios:
+  git reset --soft HEAD~1
+  ;;
+"hard")
+  #NO quieres mantener los cambios
+  git reset --hard HEAD~1
+  ;;
+*)
+  git reset --soft HEAD~1
+  ;;
+esac
