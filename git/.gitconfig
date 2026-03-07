@@ -42,9 +42,12 @@
 	required = true
 
 [diff]
-	tool = vimdiff
+	# tool = vimdiff
+	tool = default-difftool
 	compactionHeuristic = true
 	indentHeuristic = true
+[difftool "default-difftool"]
+    cmd = code --wait --diff $LOCAL $REMOTE
 
 [difftool]
 	prompt = false
@@ -99,3 +102,5 @@
 	process = git-lfs filter-process
 	required = true
 
+[pull]
+	ff = only
