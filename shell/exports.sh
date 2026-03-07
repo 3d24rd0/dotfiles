@@ -42,6 +42,7 @@ export SDKMAN_DIR="$HOME/.sdkman"
 # Path - The higher it is, the more priority it has
 # ------------------------------------------------------------------------------
 path=(
+  "$HOME/.local/bin"
   "$HOME/.pub-cache/bin"
   "$HOME/bin"
   "$DOTLY_PATH/bin"
@@ -51,6 +52,7 @@ path=(
   "$GOPATH/bin"
   "$HOME/.cargo/bin"
   "$HOME/Library/flutter/bin"
+  "$HOME/Library/Android/sdk/platform-tools/"
   "/usr/local/opt/ruby/bin"
   "/usr/local/opt/python/libexec/bin"
   "/opt/homebrew/bin"
