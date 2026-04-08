@@ -34,7 +34,6 @@ brew "denisidoro/tools/docpars"
 cask "android-studio"
 cask "github"
 cask "google-chrome"
-cask "keeweb"
-cask "logseq"
+
 cask "microsoft-teams"
 cask "visual-studio-code"

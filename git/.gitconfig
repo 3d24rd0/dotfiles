@@ -17,16 +17,25 @@
 [core]
 	excludesfile = ~/.gitignore_global
 	attributesfile = ~/.gitattributes
-	editor = code --wait
+	editor = vim
+	# editor = code --wait
 	autocrlf = input
 	trustctime = false
 	precomposeunicode = false
-	pager = delta --dark
+	pager = delta
 	ignorecase = false
 
+[interactive]
+    diffFilter = delta --color-only
+
 [delta]
+	side-by-side = true
+	line-numbers = true
     features = line-numbers decorations
     whitespace-error-style = 22 reverse
+
+[merge]
+    conflictStyle = zdiff3
 
 [delta "decorations"]
     commit-decoration-style = bold yellow box ul
@@ -36,18 +45,20 @@
 [help]
 	autocorrect = 1
 
-[filter "hawser"]
-	clean = git hawser clean %f
-	smudge = git hawser smudge %f
-	required = true
+# [filter "hawser"]
+# 	clean = git hawser clean %f
+# 	smudge = git hawser smudge %f
+# 	required = true
 
 [diff]
-	# tool = vimdiff
-	tool = default-difftool
+	tool = vimdiff
+	# tool = code --wait --diff $LOCAL $REMOTE
 	compactionHeuristic = true
 	indentHeuristic = true
-[difftool "default-difftool"]
-    cmd = code --wait --diff $LOCAL $REMOTE
+	algorithm = histogram
+	colorMoved = dimmed-zebra
+	refine = true
+
 
 [difftool]
 	prompt = false
@@ -94,8 +105,7 @@
 # 	gpgsign = true
 # [gpg]
 # 	program = /usr/local/bin/gpg
-# [pull]
-# 	rebase = true
+ 
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -104,3 +114,6 @@
 
 [pull]
 	ff = only
+
+[init]
+	defaultBranch = main
